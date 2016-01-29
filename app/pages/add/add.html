@@ -1,0 +1,55 @@
+
+<ion-navbar *navbar>
+  <ion-title>
+    Add Event
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="add">
+  <div padding>
+    <ion-segment [(ngModel)]="method">
+      <ion-segment-button value="contacts">
+        Contacts
+      </ion-segment-button>
+      <ion-segment-button value="facebook">
+        Facebook
+      </ion-segment-button>
+      <ion-segment-button value="manual">
+        Manual
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="method" padding>
+    <div *ngSwitchWhen="'contacts'">
+      <ion-searchbar></ion-searchbar>
+      <ion-list>
+        <ion-item>Annie</ion-item>
+        <ion-item>CC</ion-item>
+        <ion-item>Dad</ion-item>
+        <ion-item>Mom</ion-item>
+      </ion-list>
+    </div>
+
+    <div *ngSwitchWhen="'facebook'">
+      <button block>
+        <ion-icon name="person"></ion-icon>
+        Select Friend
+      </button>
+    </div>
+
+    <div *ngSwitchWhen="'manual'">
+      <ion-list>
+        <ion-input floating-label>
+          <ion-label>Name</ion-label>
+          <input type="text" value="">
+        </ion-input>
+
+        <ion-input floating-label>
+          <ion-label>Date</ion-label>
+          <input type="text" value="">
+        </ion-input>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
