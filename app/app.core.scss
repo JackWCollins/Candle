@@ -7,6 +7,6 @@
 // By default each design mode includes these shared imports.
 // App Shared Sass variables belong in app.variables.scss.
 
-@import 'pages/calendar/page1';
-@import 'pages/reminder/page2';
+@import 'pages/calendar/calendar';
+@import 'pages/reminder/reminder';
 @import 'pages/add/add';

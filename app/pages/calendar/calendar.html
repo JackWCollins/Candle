@@ -2,20 +2,22 @@
   <ion-title>Calendar</ion-title>
 </ion-navbar>
 
-<ion-content padding>
+<ion-content>
   <div class="calendar">
     <div class="year-view">
-      <ion-row>
-        <ion-col class="col-33" *ngFor="#year of years">{{year}}</ion-col>
+      <ion-row class="year-row">
+        <ion-col class="year" *ngFor="#year of years">
+          {{ year }}
+        </ion-col>
       </ion-row>
     </div>
 
-    <div class="month-view">
-      Month View
-    </div>
+    <!--<div class="month-view">-->
+      <!--Month View-->
+    <!--</div>-->
 
-    <div class="day-view">
-      Day View
-    </div>
+    <!--<div class="day-view">-->
+      <!--Day View-->
+    <!--</div>-->
   </div>
 </ion-content>
