@@ -6,25 +6,29 @@
   <div class="calendar">
     <div class="year-view">
       <div class="year" *ngFor="#year of years">
-        <div class="year-text">{{year}}</div>
+        <div class="year-text" (click)="selectYear(year)" [ngClass]="{active: selectedYear == year}">{{year}}</div>
       </div>
     </div>
-
-    <hr>
 
     <div class="calendar-summary">
       <h5 class="header">4 Events this Year</h5>
       <div class="event">
-        <div class="event-description">
-          Caroline's Birthday
+        <div class="gift">
+          <ion-icon name="mail"></ion-icon>
         </div>
-        <div class="event-date">
-          January 26th
+        <div class="details">
+          <div class="description">
+            Caroline's Birthday
+          </div>
+          <div class="date">
+            January 26th
+          </div>
         </div>
       </div>
+
       <div class="event">
         <div class="gift">
-
+          <ion-icon name="flower"></ion-icon>
         </div>
         <div class="details">
           <div class="description">
