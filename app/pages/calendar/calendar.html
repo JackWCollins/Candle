@@ -5,11 +5,36 @@
 <ion-content>
   <div class="calendar">
     <div class="year-view">
-      <ion-row class="year-row">
-        <ion-col class="year" *ngFor="#year of years">
-          {{ year }}
-        </ion-col>
-      </ion-row>
+      <div class="year" *ngFor="#year of years">
+        <div class="year-text">{{year}}</div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="calendar-summary">
+      <h5 class="header">4 Events this Year</h5>
+      <div class="event">
+        <div class="event-description">
+          Caroline's Birthday
+        </div>
+        <div class="event-date">
+          January 26th
+        </div>
+      </div>
+      <div class="event">
+        <div class="gift">
+
+        </div>
+        <div class="details">
+          <div class="description">
+            Your 3rd Anniversary
+          </div>
+          <div class="date">
+            May 26th
+          </div>
+        </div>
+      </div>
     </div>
 
     <!--<div class="month-view">-->

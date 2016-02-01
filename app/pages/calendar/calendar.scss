@@ -1,12 +1,58 @@
 .calendar {
   height: 100%;
 
-  .year-view {
-    .year-row {
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
+  .calendar-summary {
+    margin-left: 5px;
+    .header {
+      margin-top: 5px;
+    }
+    .event {
+      display: flex;
+      margin: 5px 3px;
+      padding: 3px;
+      border: 1px solid color(light);
+      border-radius: 3px;
 
-      .year {
+      .gift {
+
+      }
+
+      .details {
+        display: flex;
+        .description {
+          width: 50%;
+        }
+
+        .date {
+          font-style: italic;
+          color: color(secondary-text);
+        }
+      }
+    }
+  }
+
+  .year-view {
+    height: 75%;
+    .year {
+      display: flex;
+      width: 33%;
+      height: 33%;
+      float: left;
+      align-items: center;
+      justify-content: center;
+
+      .year-text {
+        line-height: 60px;
+        width: 60px;
+        font-size: 20px;
+        text-align: center;
+
+        &.active {
+          color: color(header-text);
+          font-weight: bold;
+          background-color: color(primary);
+          border-radius: 30px;
+        }
       }
     }
   }
